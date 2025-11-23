@@ -8476,6 +8476,70 @@ Data cleaning complete! Final dataset has 213 countries.
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d47f13fe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Results">Results<a class="anchor-link" href="#Results">¶</a></h2><h3 id="Descriptive-Statistics">Descriptive Statistics<a class="anchor-link" href="#Descriptive-Statistics">¶</a></h3><p>The analysis includes data from 213 countries with complete COVID-19 outcome data and at least one healthcare indicator. Key descriptive statistics reveal substantial variation in both healthcare capacity and pandemic outcomes across countries:</p>
+<p><strong>COVID-19 Deaths per Million:</strong></p>
+<ul>
+<li>Mean: 1,246.82 deaths per million</li>
+<li>Median: 814.18 deaths per million</li>
+<li>Standard Deviation: 1,315.87</li>
+<li>Range: 0 to 6,512.45 deaths per million</li>
+</ul>
+<p><strong>Hospital Beds per 1,000 People:</strong></p>
+<ul>
+<li>Mean: 3.04 beds per 1,000</li>
+<li>Median: 2.35 beds per 1,000</li>
+<li>Countries with data: 177</li>
+<li>Range: 0.17 to 22.02 beds per 1,000</li>
+</ul>
+<p><strong>Health Expenditure (% of GDP):</strong></p>
+<ul>
+<li>Mean: 6.88%</li>
+<li>Median: 6.58%</li>
+<li>Countries with data: 192</li>
+<li>Range: 1.82% to 23.09%</li>
+</ul>
+<p><strong>Life Expectancy:</strong></p>
+<ul>
+<li>Mean: 73.65 years</li>
+<li>Median: 74.43 years</li>
+<li>Range: 54.46 to 86.37 years</li>
+</ul>
+<p>These statistics highlight significant global disparities in healthcare infrastructure and pandemic outcomes, with some countries having over 10 times more hospital beds per capita than others, and COVID-19 death rates varying by more than 6,500 deaths per million.</p>
+<h3 id="Visualizations">Visualizations<a class="anchor-link" href="#Visualizations">¶</a></h3><p><strong>Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates.</strong></p>
+<p>The first figure presents two scatter plots examining the relationship between healthcare capacity and COVID-19 outcomes. The left panel shows hospital beds per 1,000 people versus COVID-19 deaths per million, with a trend line indicating the relationship. The right panel displays health expenditure as a percentage of GDP versus COVID-19 deaths per million. Both plots include axis labels ("Hospital Beds per 1,000 People" and "Health Expenditure (% of GDP)" on the x-axes, "COVID-19 Deaths per Million" on the y-axes) and trend lines to visualize the direction and strength of relationships.</p>
+<p><strong>Figure 2: Histograms showing the distribution of key variables across countries.</strong></p>
+<p>The second figure presents four histograms displaying the distribution of key variables: COVID-19 deaths per million, hospital beds per 1,000 people, health expenditure (% of GDP), and life expectancy. Each histogram includes axis labels, a mean indicator line, and shows the distribution shape across the 213 countries in the analysis. The x-axes are labeled with the variable names and units, while the y-axes show "Number of Countries."</p>
+<p><strong>Figure 3: Bar charts comparing top countries by hospital bed capacity and COVID-19 mortality rates.</strong></p>
+<p>The third figure presents two horizontal bar charts. The left panel shows the top 10 countries by hospital bed capacity per 1,000 people, with axis labels "Hospital Beds per 1,000 People" on the x-axis and country names on the y-axis. The right panel displays the top 10 countries by COVID-19 deaths per million, with axis labels "COVID-19 Deaths per Million" on the x-axis and country names on the y-axis. Both charts include value labels on each bar.</p>
+<h3 id="Correlation-Analysis">Correlation Analysis<a class="anchor-link" href="#Correlation-Analysis">¶</a></h3><p>The correlation analysis reveals the following relationships between healthcare indicators and COVID-19 deaths per million:</p>
+<ul>
+<li><strong>Life Expectancy</strong>: Correlation coefficient of 0.508 (moderate positive correlation)</li>
+<li><strong>Hospital Beds per 1,000</strong>: Correlation coefficient of 0.296 (weak to moderate positive correlation)</li>
+<li><strong>Health Expenditure (% of GDP)</strong>: Correlation coefficient of 0.247 (weak positive correlation)</li>
+</ul>
+<p>Interestingly, these correlations are positive, which may seem counterintuitive. However, this likely reflects that countries with better healthcare infrastructure (higher life expectancy, more hospital beds, higher health spending) also tend to be countries with older populations and better reporting systems, which may have contributed to higher recorded death rates during the pandemic.</p>
+<h3 id="Regression-Analysis">Regression Analysis<a class="anchor-link" href="#Regression-Analysis">¶</a></h3><p>The multiple linear regression model, including 176 countries with complete data, provides insights into the independent contributions of healthcare factors:</p>
+<ul>
+<li><strong>Model Fit</strong>: R-squared of 0.274, indicating that healthcare capacity indicators explain approximately 27.4% of the variation in COVID-19 deaths per million</li>
+<li><strong>Adjusted R-squared</strong>: 0.262</li>
+<li><strong>F-statistic</strong>: 21.66 (p &lt; 0.001), indicating the model is statistically significant</li>
+</ul>
+<p><strong>Key Coefficients:</strong></p>
+<ul>
+<li><strong>Life Expectancy</strong>: Coefficient of 80.81 (p &lt; 0.001), statistically significant</li>
+<li><strong>Health Expenditure (% of GDP)</strong>: Coefficient of 64.10 (p = 0.030), statistically significant</li>
+<li><strong>Hospital Beds per 1,000</strong>: Coefficient of 64.82 (p = 0.088), marginally significant</li>
+</ul>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cfdbd333">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8728,7 +8792,7 @@ Correlations with COVID-19 Deaths per Million:
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'health_capacity_vs_covid_deaths.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates. This figure presents two scatter plots examining the relationship between healthcare capacity and COVID-19 outcomes. The left panel shows hospital beds per 1,000 people versus COVID-19 deaths per million, with a trend line indicating the relationship. The right panel displays health expenditure as a percentage of GDP versus COVID-19 deaths per million. Both plots include axis labels (</span><span class="se">\"</span><span class="s2">Hospital Beds per 1,000 People</span><span class="se">\"</span><span class="s2"> and </span><span class="se">\"</span><span class="s2">Health Expenditure (</span><span class="si">%%</span><span class="s2"> of GDP)</span><span class="se">\"</span><span class="s2"> on the x-axes, </span><span class="se">\"</span><span class="s2">COVID-19 Deaths per Million</span><span class="se">\"</span><span class="s2"> on the y-axes) and trend lines to visualize the direction and strength of relationships."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8813,7 +8877,7 @@ Correlations with COVID-19 Deaths per Million:
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'variable_distributions.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 2: Histograms showing the distribution of key variables across countries."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 2: Histograms showing the distribution of key variables across countries. This figure presents four histograms displaying the distribution of key variables: COVID-19 deaths per million, hospital beds per 1,000 people, health expenditure (</span><span class="si">%%</span><span class="s2"> of GDP), and life expectancy. Each histogram includes axis labels, a mean indicator line, and shows the distribution shape across the 213 countries in the analysis. The x-axes are labeled with the variable names and units, while the y-axes show </span><span class="se">\"</span><span class="s2">Number of Countries.</span><span class="se">\"</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8895,7 +8959,7 @@ Correlations with COVID-19 Deaths per Million:
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'top_countries_comparison.png'</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 3: Bar charts comparing top countries by hospital bed capacity and COVID-19 mortality rates."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 3: Bar charts comparing top countries by hospital bed capacity and COVID-19 mortality rates. This figure presents two horizontal bar charts. The left panel shows the top 10 countries by hospital bed capacity per 1,000 people, with axis labels </span><span class="se">\"</span><span class="s2">Hospital Beds per 1,000 People</span><span class="se">\"</span><span class="s2"> on the x-axis and country names on the y-axis. The right panel displays the top 10 countries by COVID-19 deaths per million, with axis labels </span><span class="se">\"</span><span class="s2">COVID-19 Deaths per Million</span><span class="se">\"</span><span class="s2"> on the x-axis and country names on the y-axis. Both charts include value labels on each bar."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
