@@ -7539,7 +7539,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=742ba8e2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=742ba8e2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7570,21 +7570,6 @@ a.anchor-link {
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Raw data directory: </span><span class="si">{</span><span class="n">raw_data_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Cleaned data directory: </span><span class="si">{</span><span class="n">cleaned_data_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Libraries imported successfully
-Raw data directory: data/raw
-Cleaned data directory: data/cleaned
-</pre>
 </div>
 </div>
 </div>
@@ -8483,7 +8468,8 @@ Data cleaning complete! Final dataset has 213 countries.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Results">Results<a class="anchor-link" href="#Results">¶</a></h2><h3 id="Descriptive-Statistics">Descriptive Statistics<a class="anchor-link" href="#Descriptive-Statistics">¶</a></h3><p>The analysis includes data from 213 countries with complete COVID-19 outcome data and at least one healthcare indicator. Key descriptive statistics reveal substantial variation in both healthcare capacity and pandemic outcomes across countries:</p>
+<h2 id="Results">Results<a class="anchor-link" href="#Results">¶</a></h2><p>[TODO] Add a small paragraph for results. End the paragraph telling the reader about the appendix.</p>
+<h3 id="Descriptive-Statistics">Descriptive Statistics<a class="anchor-link" href="#Descriptive-Statistics">¶</a></h3><p>The analysis includes data from 213 countries with complete COVID-19 outcome data and at least one healthcare indicator. Key descriptive statistics reveal substantial variation in both healthcare capacity and pandemic outcomes across countries:</p>
 <p><strong>COVID-19 Deaths per Million:</strong></p>
 <ul>
 <li>Mean: 1,246.82 deaths per million</li>
@@ -8512,10 +8498,13 @@ Data cleaning complete! Final dataset has 213 countries.
 <li>Range: 54.46 to 86.37 years</li>
 </ul>
 <p>These statistics highlight significant global disparities in healthcare infrastructure and pandemic outcomes, with some countries having over 10 times more hospital beds per capita than others, and COVID-19 death rates varying by more than 6,500 deaths per million.</p>
-<h3 id="Visualizations">Visualizations<a class="anchor-link" href="#Visualizations">¶</a></h3><p><strong>Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates.</strong></p>
+<h3 id="Visualizations">Visualizations<a class="anchor-link" href="#Visualizations">¶</a></h3><p><img alt="Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates." src="./health_capacity_vs_covid_deaths.png"/></p>
+<p><strong>Figure 1: Scatter plots showing relationships between healthcare capacity indicators and COVID-19 mortality rates.</strong></p>
 <p>The first figure presents two scatter plots examining the relationship between healthcare capacity and COVID-19 outcomes. The left panel shows hospital beds per 1,000 people versus COVID-19 deaths per million, with a trend line indicating the relationship. The right panel displays health expenditure as a percentage of GDP versus COVID-19 deaths per million. Both plots include axis labels ("Hospital Beds per 1,000 People" and "Health Expenditure (% of GDP)" on the x-axes, "COVID-19 Deaths per Million" on the y-axes) and trend lines to visualize the direction and strength of relationships.</p>
+<p><img alt="Figure 2: Histograms showing the distribution of key variables across countries." src="./variable_distributions.png"/></p>
 <p><strong>Figure 2: Histograms showing the distribution of key variables across countries.</strong></p>
 <p>The second figure presents four histograms displaying the distribution of key variables: COVID-19 deaths per million, hospital beds per 1,000 people, health expenditure (% of GDP), and life expectancy. Each histogram includes axis labels, a mean indicator line, and shows the distribution shape across the 213 countries in the analysis. The x-axes are labeled with the variable names and units, while the y-axes show "Number of Countries."</p>
+<p><img alt="Figure 3: Bar charts comparing top countries by hospital bed capacity and COVID-19 mortality rates." src="./top_countries_comparison.png"/></p>
 <p><strong>Figure 3: Bar charts comparing top countries by hospital bed capacity and COVID-19 mortality rates.</strong></p>
 <p>The third figure presents two horizontal bar charts. The left panel shows the top 10 countries by hospital bed capacity per 1,000 people, with axis labels "Hospital Beds per 1,000 People" on the x-axis and country names on the y-axis. The right panel displays the top 10 countries by COVID-19 deaths per million, with axis labels "COVID-19 Deaths per Million" on the x-axis and country names on the y-axis. Both charts include value labels on each bar.</p>
 <h3 id="Correlation-Analysis">Correlation Analysis<a class="anchor-link" href="#Correlation-Analysis">¶</a></h3><p>The correlation analysis reveals the following relationships between healthcare indicators and COVID-19 deaths per million:</p>
@@ -8540,7 +8529,58 @@ Data cleaning complete! Final dataset has 213 countries.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cfdbd333">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=097d4675">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Discussion-and-Interpretation-of-Results">Discussion and Interpretation of Results<a class="anchor-link" href="#Discussion-and-Interpretation-of-Results">¶</a></h3><p>The analysis points to clear relationships between different aspects of healthcare capacity and COVID-19 outcomes. While strong infrastructure appears consistently linked to better results, the findings also show that pandemic performance cannot be attributed to any single healthcare measure alone:</p>
+<p><strong>1. Hospital Bed Capacity and COVID-19 Mortality:</strong>
+The scatter plot and correlation analysis show a clear negative relationship between hospital beds per 1,000 people and COVID-19 deaths per million. Countries with higher bed capacity generally experienced lower mortality rates, suggesting that the ability to admit and treat large numbers of severe cases was critical during peak infection periods. In many countries with limited bed availability, hospitals became rapidly overwhelmed, leading to delays in care, shortages in intensive care units, and ultimately higher fatality rates. This finding reinforces the idea that baseline healthcare infrastructure—particularly acute care capacity—is a significant protective factor during large-scale health emergencies.</p>
+<p><strong>2. Health Expenditure and Outcomes:</strong>
+The relationship between health expenditure (as a percentage of GDP) and COVID-19 mortality is more nuanced. While some correlation exists, it is weaker compared to hospital bed capacity. This likely reflects the complexity of how healthcare spending translates into outcomes. High spending does not automatically guarantee effective pandemic response; efficiency, allocation of resources, and the structure of health systems vary widely. Some countries spend heavily on healthcare but allocate funds toward administrative or specialised services rather than public health preparedness. Conversely, countries with lower spending but strong primary care networks or efficient health service delivery may achieve better-than-expected outcomes. Thus, expenditure alone may be a less reliable predictor of performance during a pandemic than concrete infrastructure indicators.</p>
+<p><strong>3. Regional and Economic Disparities:</strong>
+The descriptive statistics underline substantial inequalities in both healthcare capacity and pandemic outcomes. Hospital bed availability ranges from more than 10 beds per 1,000 people in some high-income countries to fewer than 1 bed in low-income settings. This disparity is mirrored in COVID-19 mortality, which varies from under 100 deaths per million to well over 3,000 in the hardest-hit regions. These patterns reflect deeper global health inequities, including unequal investment in healthcare systems, differing levels of economic development, and disparities in access to essential services. Regions with weaker healthcare systems entered the pandemic at a severe disadvantage, and the consequences are evident in the mortality data.</p>
+<p><strong>4. Regression Model Insights:</strong>
+The multiple regression analysis provides a more rigorous test of the relationship between healthcare capacity and mortality. The results show that hospital bed capacity maintains a statistically significant negative association with COVID-19 deaths even when controlling for other factors. This strengthens the argument that bed availability is not merely correlated with lower mortality but is an independent predictor. The model suggests that countries with greater per-capita bed capacity were better able to absorb patient surges and prevent avoidable deaths. Although other healthcare indicators may contribute to outcomes, their effects appear weaker or more context-dependent compared to bed supply.</p>
+<p><strong>Limitations of the study:</strong>
+While the analysis offers meaningful insights, several limitations must be acknowledged. First, correlation does not imply causation; countries with more hospital beds may also have stronger governance, better-trained healthcare workers, or more effective public health systems that contribute to better outcomes. Second, many influential variables—such as the timing of pandemic waves, strictness of policy interventions, vaccination rollout, demographic structure (e.g., proportion of elderly people), comorbidities, and population density—were not included and could alter the observed relationships. Third, inconsistencies in data reporting, especially regarding COVID-19 deaths and hospital capacity across countries, may affect the accuracy of comparisons. Finally, the dynamic nature of the pandemic means that findings may vary across different time periods or phases of the outbreak.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6cbaf87e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>This analysis explored the relationship between key healthcare capacity indicators and COVID-19 outcomes across countries globally. Using a structured approach that included data cleaning, descriptive statistics, correlation analyses, and multiple regression modeling, the study identified consistent patterns linking stronger healthcare infrastructure to better pandemic outcomes. In particular, hospital bed capacity emerged as a significant predictor: countries with more beds per capita generally experienced lower COVID-19 mortality rates.</p>
+<p>To reach these findings, data from major global health repositories were integrated, missing values were addressed, and country identifiers were standardised to ensure compatibility across datasets. These steps made it possible to conduct reliable statistical comparisons and reveal meaningful cross-national trends.</p>
+<p>Overall, the results underscore the critical role of healthcare infrastructure in pandemic preparedness and response. Countries with more resilient health systems, characterised by adequate hospital capacity and other foundational resources, were better able to absorb surges in severe cases, maintain continuity of care, and ultimately prevent avoidable deaths. These insights highlight the value of sustained investment in healthcare capacity as a cornerstone of global health security.</p>
+<h3 id="Recommendations-for-Next-Steps">Recommendations for Next Steps<a class="anchor-link" href="#Recommendations-for-Next-Steps">¶</a></h3><ol>
+<li><p><strong>Expand the Analysis to Include Policy and Demographic Factors</strong>: Future research should incorporate data on government response measures (lockdowns, travel restrictions, testing policies), population demographics (age structure, population density), and socioeconomic factors (GDP per capita, education levels) to develop a more comprehensive model of pandemic outcomes. This would help disentangle the effects of healthcare capacity from other important factors.</p>
+</li>
+<li><p><strong>Longitudinal Analysis of Healthcare Investment and Outcomes</strong>: Conduct a time-series analysis examining how changes in healthcare spending and infrastructure development over the past decade relate to pandemic outcomes. This would provide stronger evidence for causal relationships and help identify which types of healthcare investments are most effective for pandemic preparedness.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37747f8f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Appendix-1.-Results">Appendix 1. Results<a class="anchor-link" href="#Appendix-1.-Results">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=29a12b2c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8653,7 +8693,7 @@ Health Expenditure (% of GDP):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=959a9de0">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=706c09bf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8731,7 +8771,7 @@ Correlations with COVID-19 Deaths per Million:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=57d67f81">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2e8918c1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8817,7 +8857,7 @@ Correlations with COVID-19 Deaths per Million:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fbadc76f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=93e264f1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8902,7 +8942,7 @@ Correlations with COVID-19 Deaths per Million:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9daf9519">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=176a3294">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8984,7 +9024,7 @@ Correlations with COVID-19 Deaths per Million:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7e1aff7a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4cce9690">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9107,46 +9147,6 @@ Coefficients:
   life_expectancy_years: 80.81 (p=0.0000)***
 </pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=097d4675">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Discussion-and-Interpretation-of-Results">Discussion and Interpretation of Results<a class="anchor-link" href="#Discussion-and-Interpretation-of-Results">¶</a></h3><p>The analysis points to clear relationships between different aspects of healthcare capacity and COVID-19 outcomes. While strong infrastructure appears consistently linked to better results, the findings also show that pandemic performance cannot be attributed to any single healthcare measure alone:</p>
-<p><strong>1. Hospital Bed Capacity and COVID-19 Mortality:</strong>
-The scatter plot and correlation analysis show a clear negative relationship between hospital beds per 1,000 people and COVID-19 deaths per million. Countries with higher bed capacity generally experienced lower mortality rates, suggesting that the ability to admit and treat large numbers of severe cases was critical during peak infection periods. In many countries with limited bed availability, hospitals became rapidly overwhelmed, leading to delays in care, shortages in intensive care units, and ultimately higher fatality rates. This finding reinforces the idea that baseline healthcare infrastructure—particularly acute care capacity—is a significant protective factor during large-scale health emergencies.</p>
-<p><strong>2. Health Expenditure and Outcomes:</strong>
-The relationship between health expenditure (as a percentage of GDP) and COVID-19 mortality is more nuanced. While some correlation exists, it is weaker compared to hospital bed capacity. This likely reflects the complexity of how healthcare spending translates into outcomes. High spending does not automatically guarantee effective pandemic response; efficiency, allocation of resources, and the structure of health systems vary widely. Some countries spend heavily on healthcare but allocate funds toward administrative or specialised services rather than public health preparedness. Conversely, countries with lower spending but strong primary care networks or efficient health service delivery may achieve better-than-expected outcomes. Thus, expenditure alone may be a less reliable predictor of performance during a pandemic than concrete infrastructure indicators.</p>
-<p><strong>3. Regional and Economic Disparities:</strong>
-The descriptive statistics underline substantial inequalities in both healthcare capacity and pandemic outcomes. Hospital bed availability ranges from more than 10 beds per 1,000 people in some high-income countries to fewer than 1 bed in low-income settings. This disparity is mirrored in COVID-19 mortality, which varies from under 100 deaths per million to well over 3,000 in the hardest-hit regions. These patterns reflect deeper global health inequities, including unequal investment in healthcare systems, differing levels of economic development, and disparities in access to essential services. Regions with weaker healthcare systems entered the pandemic at a severe disadvantage, and the consequences are evident in the mortality data.</p>
-<p><strong>4. Regression Model Insights:</strong>
-The multiple regression analysis provides a more rigorous test of the relationship between healthcare capacity and mortality. The results show that hospital bed capacity maintains a statistically significant negative association with COVID-19 deaths even when controlling for other factors. This strengthens the argument that bed availability is not merely correlated with lower mortality but is an independent predictor. The model suggests that countries with greater per-capita bed capacity were better able to absorb patient surges and prevent avoidable deaths. Although other healthcare indicators may contribute to outcomes, their effects appear weaker or more context-dependent compared to bed supply.</p>
-<p><strong>Limitations of the study:</strong>
-While the analysis offers meaningful insights, several limitations must be acknowledged. First, correlation does not imply causation; countries with more hospital beds may also have stronger governance, better-trained healthcare workers, or more effective public health systems that contribute to better outcomes. Second, many influential variables—such as the timing of pandemic waves, strictness of policy interventions, vaccination rollout, demographic structure (e.g., proportion of elderly people), comorbidities, and population density—were not included and could alter the observed relationships. Third, inconsistencies in data reporting, especially regarding COVID-19 deaths and hospital capacity across countries, may affect the accuracy of comparisons. Finally, the dynamic nature of the pandemic means that findings may vary across different time periods or phases of the outbreak.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6cbaf87e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>This analysis explored the relationship between key healthcare capacity indicators and COVID-19 outcomes across countries globally. Using a structured approach that included data cleaning, descriptive statistics, correlation analyses, and multiple regression modeling, the study identified consistent patterns linking stronger healthcare infrastructure to better pandemic outcomes. In particular, hospital bed capacity emerged as a significant predictor: countries with more beds per capita generally experienced lower COVID-19 mortality rates.</p>
-<p>To reach these findings, data from major global health repositories were integrated, missing values were addressed, and country identifiers were standardised to ensure compatibility across datasets. These steps made it possible to conduct reliable statistical comparisons and reveal meaningful cross-national trends.</p>
-<p>Overall, the results underscore the critical role of healthcare infrastructure in pandemic preparedness and response. Countries with more resilient health systems, characterised by adequate hospital capacity and other foundational resources, were better able to absorb surges in severe cases, maintain continuity of care, and ultimately prevent avoidable deaths. These insights highlight the value of sustained investment in healthcare capacity as a cornerstone of global health security.</p>
-<h3 id="Recommendations-for-Next-Steps">Recommendations for Next Steps<a class="anchor-link" href="#Recommendations-for-Next-Steps">¶</a></h3><ol>
-<li><p><strong>Expand the Analysis to Include Policy and Demographic Factors</strong>: Future research should incorporate data on government response measures (lockdowns, travel restrictions, testing policies), population demographics (age structure, population density), and socioeconomic factors (GDP per capita, education levels) to develop a more comprehensive model of pandemic outcomes. This would help disentangle the effects of healthcare capacity from other important factors.</p>
-</li>
-<li><p><strong>Longitudinal Analysis of Healthcare Investment and Outcomes</strong>: Conduct a time-series analysis examining how changes in healthcare spending and infrastructure development over the past decade relate to pandemic outcomes. This would provide stronger evidence for causal relationships and help identify which types of healthcare investments are most effective for pandemic preparedness.</p>
-</li>
-</ol>
 </div>
 </div>
 </div>
